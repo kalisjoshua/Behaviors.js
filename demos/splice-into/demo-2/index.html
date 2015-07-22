@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Example 1</title>
+    <style>
+        form {
+            margin: 1em;
+            padding: 1em;
+            background-color: #fff0f0;
+        }
+
+        div {
+            margin: 1em;
+            padding: 1em;
+            background-color: #f0f0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Second Example, First Page</h1>
+
+    <p>It's possible to replace the submitting form with something entirely different. As you can see, the entie tag gets replaced with the new one (think outerHTML).</p>
+
+    <form action="result.html" method="get" id="target" splice-into="#target">
+        <p>This is a form.</p>
+        <input type="submit" value="Click Me" />
+    </form>
+
+    <script src="../../../src/splice-into.js"></script>
+</body>
+
+</html>

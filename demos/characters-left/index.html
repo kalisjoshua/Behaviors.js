@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<style>
+		label,
+		input {
+			display: block;
+		}
+
+		label {
+			margin-top: 1em;
+		}
+
+		characters-left::after {
+			content: " characters left."
+		}
+
+		characters-left[overflow="true"] {
+			color: red;
+		}
+
+		characters-left[overflow="true"]::after  {
+			content: " characters too many.";
+		}
+	</style>
+
+
+	<label>Type Something (maxlength): </label>
+	<input maxlength="10" id="x" />
+	<characters-left in="x"></characters-left>
+
+	<label>Type Something (data-val-length-max, can overflow): </label>
+	<textarea data-val-length-max="10" id="y"></textarea>
+	<!-- The inner text will be replace by the counter, but it makes sensible fallback. -->
+	<characters-left in="y">(10 characters max)</characters-left>
+
+	<script type="text/javascript" src="../../src/characters-left.js" poll-rate="50"></script>
+
+</body>
+
+</html>

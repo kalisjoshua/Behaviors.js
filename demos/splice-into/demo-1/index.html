@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Example 1</title>
+    <style>
+        form {
+            margin: 1em;
+            padding: 1em;
+            background-color: #fff0f0;
+        }
+
+        div {
+            margin: 1em;
+            padding: 1em;
+            background-color: #f0f0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>First Example, First Page</h1>
+
+    <p>Simple substitution.</p>
+
+    <form action="result.html" method="get" splice-into="#the-div">
+        <p>This is a form.</p>
+        <input type="submit" value="Click Me" />
+    </form>
+
+    <div id="the-div">
+        This is a div on the first page.
+    </div>
+
+    <script src="../../../src/splice-into.js"></script>
+</body>
+
+</html>

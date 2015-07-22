@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Example 3</title>
+    <style>
+        form {
+            margin: 1em;
+            padding: 1em;
+            background-color: #fff0f0;
+        }
+
+        div {
+            margin: 1em;
+            padding: 1em;
+            background-color: #f0f0ff;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        [splice-into-loaded] {
+            animation: fadein 1s;
+            -webkit-animation: fadein 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Third Example, First Page</h1>
+
+    <p>Multiple substitutions using CSS selector. Notice how you can use another CSS selector [splice-into-loaded] to animate element changes.</p>
+
+    <form action="result.html" method="get" splice-into="li">
+        <input type="submit" value="Click Me" />
+    </form>
+
+    <ul>
+        <li id="li1">Item #1</li>
+        <li id="li2">Item #2, which has no replacement on the second page.</li>
+        <li id="li3">Item #3</li>
+        <li id="li4">Item #4</li>
+        <!-- Notice, there is no item with id="li5" here. -->
+    </ul>
+
+    <script src="../../../src/splice-into.js"></script>
+</body>
+
+</html>

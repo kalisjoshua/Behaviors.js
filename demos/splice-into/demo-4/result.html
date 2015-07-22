@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Example 4</title>
+    <style>
+        form {
+            margin: 1em;
+            padding: 1em;
+            background-color: #fff0f0;
+        }
+
+        form.two {
+            background-color: #f0fff0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fourth Example, Second Page</h1>
+
+    <form action="index.html" method="get" splice-into="form" id="needId" class="two">
+        <p>This is a form on the SECOND page.</p>
+        <input type="submit" value="Click Me Again" />
+    </form>
+
+    <script src="../../../src/splice-into.js"></script>
+</body>
+
+</html>

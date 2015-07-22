@@ -1,0 +1,19 @@
+{
+  "name": "Behaviors.JS",
+  "description": "Directive-based progressive enhancement library",
+  "author": "Roman Ivanov <RomanIvanov@QuickenLoans.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "0.3.0",
+  "scripts": {
+    "lint": "jshint src/ && eslint src/"
+  },
+  "dependencies": {
+    "eslint": "^0.20.0",
+    "jshint": "^2.7.0",
+    "jasmine": "^2.3.0"
+  }
+}

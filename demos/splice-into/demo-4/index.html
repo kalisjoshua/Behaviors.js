@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Example 4</title>
+    <style>
+        form {
+            margin: 1em;
+            padding: 1em;
+            background-color: #fff0f0;
+        }
+
+        form.two {
+            background-color: #f0fff0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fourth Example, First Page</h1>
+
+    <p>Behaviors are registered automatically, so you can load more progressively enhanced elements at any time. There is no need to add special code to onload events for that.</p>
+
+    <form action="result.html" method="get" splice-into="form" id="needId">
+        <p>This is a form on the first page.</p>
+        <input type="submit" value="Click Me" />
+    </form>
+
+    <script src="../../../src/splice-into.js"></script>
+</body>
+
+</html>
