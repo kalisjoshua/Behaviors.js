@@ -1,9 +1,9 @@
 Behaviors.JS
 ============
 
-JavaScript libraries that are configured by adding tags and attributes to HTML. The libraries follows the principle of progressive enhancement and have no external dependencies.
+JavaScript libraries are configured by adding tags and attributes to your HTML. Each one follows the principle of progressive enhancement and has no external dependencies.
 
-Compatibility target: IE9+.
+Compatibility target: IE9+. Will fall back to default behavior on older browsers.
 
 Examples
 --------
@@ -35,3 +35,5 @@ Infinite scroller. Inlines target of a link when you scroll close to the said li
         <!-- page content... -->
         <a href="/page/2" include-on-proximity>Next Page</a>
     </div>
+
+Infinite scroller. Inlines target of a link when you scroll close to the said link.

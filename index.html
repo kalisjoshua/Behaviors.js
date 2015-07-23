@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Behaviors.JS : Progressive enhancement JavaScript libraries configured via HTML">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Behaviors.JS</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="http://git/RIvanov/Behaviors.JS">View on GitHub</a>
+
+          <h1 id="project_title">Behaviors.JS</h1>
+          <h2 id="project_tagline">Progressive enhancement JavaScript libraries configured via HTML</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>These libraries have no dependencies, so you simply need to reference one to use it. Since they follow the principle of progressive enhancement they should fall back to vanilla HTML behavior on older browsers.</p>
+
+<p>Minimum system requirements: IE9+.</p>
+
+<h2>
+<a id="splice-into" class="anchor" href="#splice-into" aria-hidden="true"><span class="octicon octicon-link"></span></a>splice-into</h2>
+
+<p>Allows you to submit forms via AJAX and then inserts new information into the current page. Since this library uses CSS selector to target elements, it can operate on several targets at once.</p>
+
+<p>To use it, add <code>splice-into="cssSelector"</code> to any HTML form. The CSS selector should target one or more elements on the current page. Those elements need to have IDs and will only be changed if the target page also has an element with matching ID.</p>
+
+<pre><code>&lt;form action="/whatever/page" splice-into="#placeholder"&gt;
+&lt;!-- ... --&gt;
+&lt;/form&gt;
+
+&lt;div id="placeholder"&gt;
+&lt;!-- this will be updated when you submit the form --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Note: If you add <code>splice-into-ignore</code> attribute to a button, submitting via that button will trigger a normal request instead of AJAX.</p>
+
+<p>Demos:</p>
+
+<ul>
+<li>Simplest example, <a href="./demos/splice-into/demo-1/index.html">single tag substitution</a>.</li>
+<li>
+<a href="./demos/splice-into/demo-2/index.html">Replacing submitted form</a>.</li>
+<li>
+<a href="./demos/splice-into/demo-3/index.html">Replacing multiple targets</a> and doing some animation.</li>
+<li>
+<a href="./demos/splice-into/demo-4/index.html">"Recursive" substitution</a>.</li>
+</ul>
+
+<h2>
+<a id="characters-left" class="anchor" href="#characters-left" aria-hidden="true"><span class="octicon octicon-link"></span></a>characters-left</h2>
+
+<p>Indicates to the user how many character they can type into a field before hitting <code>maxlength</code> or <code>data-val-length-max</code>.</p>
+
+<pre><code>&lt;input type="text" id="fieldId" maxlength="10" /&gt;
+&lt;characters-left in="fieldId" /&gt;
+</code></pre>
+
+<p>When the script runs, <code>characters-left</code> element is filled with the number of characters left until overflow. It also receives <code>overflow</code> attribute, which is set to <code>"true"</code> or <code>"false"</code>.</p>
+
+<p><a href="./demos/characters-left/index.html">Demo</a>.</p>
+
+<h2>
+<a id="include-on-proximity" class="anchor" href="#include-on-proximity" aria-hidden="true"><span class="octicon octicon-link"></span></a>include-on-proximity</h2>
+
+<p>Allows you to easily implement infinite scrolling. Works by inlining links to the next page.</p>
+
+<pre><code>&lt;div id="page"&gt;
+    &lt;!-- page content... --&gt;
+    &lt;a href="/page/2" include-on-proximity&gt;Next Page&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The script works by targeting the immediate parent element of the link and treating it as the container for appending data. In the above example the script will load <code>/page/2</code>, parse it, find an element with <code>id="page"</code>, get its content and replace "Next Page" link with that content. </p>
+
+<p>TLDR: you need a parent tag with consistent ids across all pages.</p>
+
+<p>Using the element with a value (<code>include-on-proximity="[pixels]"</code>) will change the default proximity, i.e. how close you need to get to the link before it triggers an AJAX request.</p>
+
+<p><a href="./demos/include-on-proximity/page1.html">Demo</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Behaviors.JS maintained by <a href="http://git/RIvanov">RIvanov</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
